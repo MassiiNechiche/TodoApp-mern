@@ -1,38 +1,170 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  background-color: #e3ebfb;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.app__header {
+  width: 400px;
+  height: 60px;
+  background-color: #ab7ee8;
+  margin-bottom: 20px;
+  box-shadow: 0px 3px 8px 2px #cebff4cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
+  font-weight: 600;
+  font-size: 18px;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.app__header .back {
+  position: absolute;
+  left: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app__header .back:hover {
+  color: #dcd1eb;
+  cursor: pointer;
+}
+
+.header__title {
+  display: flex;
+}
+.header__title .MuiSvgIcon-root {
+  margin-right: 10px;
+}
+
+.app__content {
+  width: 400px;
+  height: 300px;
+  background-color: white;
+  box-shadow: 0px 3px 8px 2px rgba(193, 194, 197, 0.151);
+  overflow: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  position: relative;
+}
+.app__content::-webkit-scrollbar {
+  display: none;
+}
+
+.content__todos {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: all ease-in 200ms;
+}
+
+.content__todo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+  cursor: pointer;
+  color: #8169a3;
+  transition: all ease-in 200ms;
+}
+
+.content__todo:hover {
+  color: black;
+}
+.content__todo:hover > .todo__actions {
+  display: flex;
+}
+
+.todo__name {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+
+.todo__name .checkbox {
+  margin-right: 15px;
+  font-size: 15px;
+}
+
+.todo__actions {
+  display: none;
+  font-size: 18px;
+}
+
+.todo__actions .action__edit {
+  margin-right: 5px;
+}
+
+.action__delete:hover {
+  color: rgb(236, 92, 92);
+}
+
+.app__button {
+  margin-top: -22px;
+}
+.app__button a {
+  text-decoration: none;
+  color: white;
+  width: 140px;
+  height: 45px;
+  background-color: #ab7ee8;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 3px 8px 2px #cebff4cc;
+  font-size: 18px;
+  z-index: 20;
+}
+
+.app__button a:hover {
+  box-shadow: 0px 3px 8px 4px #cebff4ea;
+  transition: all ease 200ms;
+}
+
+.app__button .MuiSvgIcon-root {
+  font-size: 25px;
+  margin-right: 5px;
+}
+
+.app__content form {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  color: #8169a3;
+}
+
+.app__content input {
+  margin-top: 20px;
+  height: 40px;
+  border: 1px solid rgb(231, 233, 235);
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.app__content .save__button {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.save__button button {
+  text-decoration: none;
+  color: white;
+  width: 100px;
+  height: 40px;
+  background-color: #ab7ee8;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
 }
